@@ -1,0 +1,74 @@
+Description: Valid identifier with letters only
+Input: ExampleIdentifier
+Expected Output: IDENTIFIER ExampleIdentifier
+
+Description: Valid identifier with letters and digits
+Input: ident123
+Expected Output: IDENTIFIER ident123
+
+Description: Invalid identifier starting with digit
+Input: 123identifier
+Expected Output: ERROR
+
+Description: Invalid identifier with special character
+Input: ident@123
+Expected Output: ERROR
+
+Description: Valid use of keyword
+Input: if
+Expected Output: KEYWORD if
+
+Description: Invalid use of keyword as identifier
+Input: while
+Expected Output: KEYWORD while
+
+Description: Valid spaces in input
+Input:    
+Expected Output: 
+
+Description: Valid tab in input
+Input: 	
+Expected Output: 
+
+Description: Valid newline in input
+Input: 
+
+Expected Output: 
+
+Description: Valid single line comment
+Input: // This is a comment
+Expected Output: 
+
+Description: Valid multi-line comment
+Input: /* This is a
+multi-line comment */
+Expected Output: 
+
+Description: Valid integer
+Input: 12345
+Expected Output: INTEGER 12345
+
+Description: Invalid integer with leading zero
+Input: 0123
+Expected Output: ERROR
+
+Description: Invalid integer out of range
+Input: 32768
+Expected Output: ERROR
+
+Description: Valid string
+Input: "hello"
+Expected Output: STRING hello
+
+Description: Invalid string with non-letter character
+Input: "hi!"
+Expected Output: ERROR
+
+Description: Invalid string without quotes
+Input: hello
+Expected Output: ERROR
+
+Description: Invalid input with unrecognized character
+Input: #
+Expected Output: ERROR
+
